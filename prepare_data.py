@@ -74,7 +74,8 @@ print(f"✅ Created {output_file}")
 
 # create label_sentences
 data_output = []
-pattern = r'<(\w+) rel="[^"]*">\s*(.*?)\s*</\1>'
+#pattern = r'<(\w+) rel="[^"]*">\s*(.*?)\s*</\1>'
+pattern = r'<(\w+)(?:\s+rel="[^"]*")?>\s*(.*?)\s*</\1>'
 
 with open(output_file, "r", encoding="utf-8") as f:
     for line in f:
